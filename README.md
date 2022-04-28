@@ -8,6 +8,8 @@
 
 ![Birthday-Rotato](https://user-images.githubusercontent.com/61842505/165660158-46a14b49-9063-4024-8317-a18ddd3a5226.png)
 
+![Favorites-Rotato](https://user-images.githubusercontent.com/61842505/165660490-31bf72d5-c120-42e6-ae4b-ffd1f2363977.png)
+
 ## About
 - 100% programmtic UI
 - MVC
