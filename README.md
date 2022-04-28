@@ -18,9 +18,8 @@
 - Custom UIAlerts
 - Child ViewControllers
 - Empty States
-- Error Handling
 - Custom Swipe Actions
-- Birthday surpise
+- Birthday surpise 👀
 
 ## Features
 - Core Data
