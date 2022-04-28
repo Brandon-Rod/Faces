@@ -21,7 +21,7 @@
 - Custom Swipe Actions
 - Birthday surpise 👀
 
-## Features
+## Technologies Used
 - Core Data
 - UITableViewController
 - CAEmittedLayer
