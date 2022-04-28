@@ -4,9 +4,9 @@
 
 ![FavoriteAlert-Rotato](https://user-images.githubusercontent.com/61842505/165658951-cf9c4652-e975-49bf-84b3-31389ac90c3c.png)
 
-![FacesDetailView](https://user-images.githubusercontent.com/61842505/165658975-cbd8d267-337c-4fa3-beb5-ff339e934311.png)
+![FacesDetail-Rotato](https://user-images.githubusercontent.com/61842505/165660140-0ad4ca4c-9f4d-42e5-b59b-dff558c2712f.png)
 
-![Birthday](https://user-images.githubusercontent.com/61842505/165658983-0406f819-5a32-41aa-873e-31a64b5affcc.png)
+![Birthday-Rotato](https://user-images.githubusercontent.com/61842505/165660158-46a14b49-9063-4024-8317-a18ddd3a5226.png)
 
 ## About
 - 100% programmtic UI
