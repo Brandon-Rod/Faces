@@ -29,5 +29,5 @@
 - UIImagePickerController
 
 ## Struggles
-- Updating the buttons' background color when tapping a new button was difficult.
+- Updating the buttons' background color when tapping a new button in the FacesGridVc was difficult.
 - Handling empty stae views in both tabs was difficuly. I didn't know how to remove the empty state view when a item was added to the table. 
