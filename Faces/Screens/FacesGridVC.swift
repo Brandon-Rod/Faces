@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum AstroType: String {
+private enum AstroType: String {
 
     case sun, moon, rising
 
@@ -15,28 +15,29 @@ enum AstroType: String {
 
 class FacesGridVC: UIViewController {
     
-    let dataController: DataController
+    private let dataController: DataController
     
-    let scrollView = UIScrollView()
-    let contentView = UIView()
+    private let scrollView = UIScrollView()
+    private let contentView = UIView()
     
-    let sunSignGrid = UIView()
-    let moonSignGrid = UIView()
-    let risingSignGrid = UIView()
+    private let sunSignGrid = UIView()
+    private let moonSignGrid = UIView()
+    private let risingSignGrid = UIView()
     
-    var astroViews: [UIView] = []
+    private let padding: CGFloat = 20
+    private let astroTitleLabel = FacesCellLabel(fontType: .title1)
+    private let unknownButton = FacesButton(backgroundColor: .systemPurple, title: Strings.unknown)
     
-    let padding: CGFloat = 20
-    let astroTitleLabel = FacesCellLabel(fontType: .title1)
-    let unknownButton = FacesButton(backgroundColor: .systemPurple, title: Strings.unknown)
-    
-    var face: Face
+    private var face: Face
+    private var astroViews: [UIView] = []
     
     init(face: Face, dataController: DataController) {
+        
         self.face = face
         self.dataController = dataController
                 
         super.init(nibName: nil, bundle: nil)
+        
     }
     
     required init?(coder: NSCoder) {

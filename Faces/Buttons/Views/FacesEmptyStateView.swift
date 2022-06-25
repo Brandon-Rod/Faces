@@ -11,7 +11,7 @@ class FacesEmptyStateView: UIView {
     
     let messageLabel = FacesCellLabel(fontType: .title1)
     let imageView = FacesImageView(frame: .zero)
-    let padding: CGFloat = 10
+    private let padding: CGFloat = 10
 
     override init(frame: CGRect) {
         super.init(frame: frame)

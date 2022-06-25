@@ -12,16 +12,16 @@ class FavoritesListVC: UIViewController, NSFetchedResultsControllerDelegate {
     
     private let listsController: NSFetchedResultsController<Face>
     
-    let dataController: DataController
-    let searchController = UISearchController(searchResultsController: nil)
-    let tableView = UITableView()
-    let emptyStateView = FacesEmptyStateView(message: Strings.noFaces)
+    private let dataController: DataController
+    private let searchController = UISearchController(searchResultsController: nil)
+    private let tableView = UITableView()
+    private let emptyStateView = FacesEmptyStateView(message: Strings.noFaces)
     
-    var faces: [Face] = []
-    var filteredFaces: [Face] = []
+    private var faces: [Face] = []
+    private var filteredFaces: [Face] = []
     
-    var isSearchBarEmpty: Bool { return searchController.searchBar.text?.isEmpty ?? true }
-    var isFiltering: Bool { return searchController.isActive && !isSearchBarEmpty }
+    private var isSearchBarEmpty: Bool { return searchController.searchBar.text?.isEmpty ?? true }
+    private var isFiltering: Bool { return searchController.isActive && !isSearchBarEmpty }
 
     override func viewDidLoad() {
         super.viewDidLoad()

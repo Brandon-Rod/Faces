@@ -9,17 +9,17 @@ import UIKit
 
 class FacesAlertVC: UIViewController {
     
-    let containerView = FacesContainerView()
-    let titleLabel = FacesTitleLabel(textAlignment: .center, fontSize: 20)
-    let messageLabel = FacesBodyLabel(textAlignment: .center)
-    let button = FacesButton(backgroundColor: .systemPurple, title: Strings.ok)
-    let padding: CGFloat = 20
+    private let containerView = FacesContainerView()
+    private let titleLabel = FacesTitleLabel(textAlignment: .center, fontSize: 20)
+    private let messageLabel = FacesBodyLabel(textAlignment: .center)
+    private let button = FacesButton(backgroundColor: .systemPurple, title: Strings.ok)
+    private let padding: CGFloat = 20
     
-    var bodyViews: [UIView] = []
+    private var bodyViews: [UIView] = []
     
-    var alertTitle: String?
-    var message: String?
-    var buttonTitle: String?
+    private var alertTitle: String?
+    private var message: String?
+    private var buttonTitle: String?
     
     init(title: String, message: String, buttonTitle: String) {
         super.init(nibName: nil, bundle: nil)
@@ -56,7 +56,7 @@ class FacesAlertVC: UIViewController {
         
     }
     
-    func configureContainerView() {
+    private func configureContainerView() {
                 
         NSLayoutConstraint.activate([
         
@@ -69,7 +69,7 @@ class FacesAlertVC: UIViewController {
         
     }
     
-    func configureTitleLabel() {
+    private func configureTitleLabel() {
                 
         titleLabel.text = alertTitle ?? Strings.generalError
         
@@ -84,7 +84,7 @@ class FacesAlertVC: UIViewController {
         
     }
     
-    func configureButtonLabel() {
+    private func configureButtonLabel() {
                 
         button.setTitle(buttonTitle ?? Strings.ok, for: .normal)
         button.addTarget(self, action: #selector(dismissVC), for: .touchUpInside)
@@ -100,7 +100,7 @@ class FacesAlertVC: UIViewController {
         
     }
     
-    func configureMessageLabel() {
+    private func configureMessageLabel() {
                 
         messageLabel.text = message ?? Strings.unableToComplete
         messageLabel.numberOfLines = 4
@@ -116,7 +116,7 @@ class FacesAlertVC: UIViewController {
         
     }
     
-    @objc func dismissVC() {
+    @objc private func dismissVC() {
         
         dismiss(animated: true)
         

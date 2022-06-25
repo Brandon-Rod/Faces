@@ -7,7 +7,7 @@
 
 import CoreData
 
-class DataController {
+final class DataController {
     
     let container: NSPersistentContainer
     

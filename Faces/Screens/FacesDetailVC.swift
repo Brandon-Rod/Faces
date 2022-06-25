@@ -9,37 +9,38 @@ import UIKit
 
 class FacesDetailVC: UIViewController {
     
-    let dataController: DataController
+    private let dataController: DataController
     
-    let scrollView = UIScrollView()
-    let contentView = UIView()
+    private let scrollView = UIScrollView()
+    private let contentView = UIView()
         
-    let faceImageView = FacesImageView(frame: .zero)
-    let imagePickerButton = FacesButton(backgroundColor: .systemPurple, title: Strings.addImage)
-    let nameLabel = FacesDetailTitleLabel(text: Strings.name)
-    let pronounsLabel = FacesDetailTitleLabel(text: Strings.pronouns)
-    let pronounsSegmentedControl = UISegmentedControl(items: [Strings.undefined, Strings.heHim, Strings.sheHer, Strings.theyThem])
-    let nameTextField = FacesTextField(placeholder: Strings.enterName)
-    let bioLabel = FacesDetailTitleLabel(text: Strings.bio)
-    let bioTextView = FacesTextView(placeholder: Strings.enterBio)
-    let dateStackView = UIStackView()
-    let birthdayLabel = FacesDetailTitleLabel(text: Strings.birthDay)
-    let datePicker = UIDatePicker()
-    let astroStackView = UIStackView()
-    let sunSignLabel = FacesAstroTitleLabel(text: "")
-    let moonSignLabel = FacesAstroTitleLabel(text: "")
-    let risingSignLabel = FacesAstroTitleLabel(text: "")
-    let astroSegue = FacesButton(backgroundColor: .systemPurple, title: Strings.astrology)
-    let favoriteButton = FacesButton(backgroundColor: .systemPurple, title: "")
-    let deleteButton = FacesButton(backgroundColor: .systemRed, title: Strings.delete)
+    private let faceImageView = FacesImageView(frame: .zero)
+    private let imagePickerButton = FacesButton(backgroundColor: .systemPurple, title: Strings.addImage)
+    private let nameLabel = FacesDetailTitleLabel(text: Strings.name)
+    private let pronounsLabel = FacesDetailTitleLabel(text: Strings.pronouns)
+    private let pronounsSegmentedControl = UISegmentedControl(items: [Strings.undefined, Strings.heHim, Strings.sheHer, Strings.theyThem])
+    private let nameTextField = FacesTextField(placeholder: Strings.enterName)
+    private let bioLabel = FacesDetailTitleLabel(text: Strings.bio)
+    private let bioTextView = FacesTextView(placeholder: Strings.enterBio)
+    private let dateStackView = UIStackView()
+    private let birthdayLabel = FacesDetailTitleLabel(text: Strings.birthDay)
+    private let datePicker = UIDatePicker()
+    private let astroStackView = UIStackView()
+    private let sunSignLabel = FacesAstroTitleLabel(text: "")
+    private let moonSignLabel = FacesAstroTitleLabel(text: "")
+    private let risingSignLabel = FacesAstroTitleLabel(text: "")
+    private let astroSegue = FacesButton(backgroundColor: .systemPurple, title: Strings.astrology)
+    private let favoriteButton = FacesButton(backgroundColor: .systemPurple, title: "")
+    private let deleteButton = FacesButton(backgroundColor: .systemRed, title: Strings.delete)
     
-    var face: Face
-    var dateViews: [UIView] = []
-    var astroViews: [UIView] = []
-    var itemViews: [UIView] = []
-    var isShowingCelebration = false
+    private var face: Face
+    private var dateViews: [UIView] = []
+    private var astroViews: [UIView] = []
+    private var itemViews: [UIView] = []
+    private var isShowingCelebration = false
     
     init(face: Face, dataController: DataController) {
+        
         self.face = face
         self.dataController = dataController
         self.sunSignLabel.text = face.sunSign

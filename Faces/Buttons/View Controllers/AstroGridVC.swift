@@ -15,19 +15,19 @@ enum Placement {
 
 class AstroGridVC: UIViewController {
     
-    let dataController: DataController
-    let stackView = UIStackView()
+    private let dataController: DataController
+    private let stackView = UIStackView()
     
-    let astroKeys = ["♈️", "♉️", "♊️", "♋️", "♌️", "♍️", "♎️", "♏️", "♐️", "♑️", "♒️", "♓️"]
-    let padding: CGFloat = 20
+    private let astroKeys = ["♈️", "♉️", "♊️", "♋️", "♌️", "♍️", "♎️", "♏️", "♐️", "♑️", "♒️", "♓️"]
+    private let padding: CGFloat = 20
 
-    let astroTitleLabel = FacesCellLabel(fontType: .title1)
-    let unknownButton = FacesButton(backgroundColor: .systemPurple, title: Strings.unknown)
-    let placement: Placement
+    private let astroTitleLabel = FacesCellLabel(fontType: .title1)
+    private let unknownButton = FacesButton(backgroundColor: .systemPurple, title: Strings.unknown)
+    private let placement: Placement
     
-    let signType: String
+    private let signType: String
 
-    var face: Face
+    private var face: Face
     
     init(face: Face, signType: String, placement: Placement, dataController: DataController) {
         
@@ -60,7 +60,7 @@ class AstroGridVC: UIViewController {
         
     }
 
-    @objc func unknownButtonTapped() {
+    @objc private func unknownButtonTapped() {
         
         switch placement {
             
@@ -139,7 +139,7 @@ class AstroGridVC: UIViewController {
         
     }
     
-    @objc func astroKeyTapped(button: FacesAstroButton) {
+    @objc private func astroKeyTapped(button: FacesAstroButton) {
         
         switch placement {
             
@@ -169,7 +169,7 @@ class AstroGridVC: UIViewController {
         
     }
     
-    func refreshButtons() {
+    private func refreshButtons() {
         
         for hStackView in stackView.arrangedSubviews {
             
@@ -185,7 +185,7 @@ class AstroGridVC: UIViewController {
         
     }
     
-    func refresh(button: FacesAstroButton) {
+    private func refresh(button: FacesAstroButton) {
         
         switch placement {
             
