@@ -24,6 +24,7 @@
 - Birthday surpise 👀
 
 ## Technologies Used
+- UIKit
 - Core Data
 - UITableViewController
 - CAEmittedLayer
